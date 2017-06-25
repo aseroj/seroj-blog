@@ -43,10 +43,13 @@ var apos = require('apostrophe')({
 		'apostrophe-assets': {
 			stylesheets: [
 				{
-					name: 'site'
+					name: 'main'
 				}
 			],
             scripts: [
+                // {
+                    // name: 'nav'
+                // },
                 {
                     name: 'site'
                 }

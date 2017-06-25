@@ -1,7 +1,7 @@
 {
   "name": "seroj",
-  "version": "2.0.0",
-  "description": "Minimal seroj",
+  "version": "1.0.0",
+  "description": "Seroj's brain stash",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": ""
   },
-  "author": "P'unk Avenue",
+  "author": "Seroj",
   "license": "MIT",
   "dependencies": {
     "apostrophe": "^2.0.0",
