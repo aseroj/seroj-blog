@@ -1,4 +1,5 @@
 @import "utils/reset.less";
+@import "utils/global.less";
 
 .sidebar-column {
     position: fixed;
@@ -9,7 +10,7 @@
     height: 100%;
     padding: 50px 40px;
     background-color: #333;
-    color: #9b9b9b;
+    color: @text-gray;
 
 
 
@@ -125,14 +126,13 @@
 .content {
     width: 75%;
     margin-left: 25%;
-    padding: 50px;
-
 
     .blog-list {
         display: block;
         max-width: 1000px;
         margin-right: auto;
         margin-left: auto;
+        padding: 50px;
     }
 
     .post-title {
@@ -205,10 +205,6 @@
         color: #333;
     }
 
-
-
-
-
     .post-title-link {
         display: block;
         -webkit-transition: opacity 200ms ease;
@@ -221,11 +217,50 @@
         display: inline-block;
     }
 
+    section {
+        text-align: center;
+
+
+        & header {
+            margin: 0 0 2em 0;
+        }
+
+
+        &.one {
+            background-color: #81918E;
+            //background-image: url(images/banner.jpg);
+            background-image: url(/modules/my-apostrophe-assets/css/images/banner.jpg);
+        }
+
+        &.cover {
+            padding: 6em 0;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        & h2 {
+            font-size: 2em;
+            letter-spacing: -1px;
+            font-weight: 300;
+            color: #ddd;
+            line-height: 1.5em;
+        }
+
+        & p {
+            color: #ddd;
+        }
+
+        & .container-cover {
+            width: 1400px;
+            margin: 0 auto;
+        }
+
+    }
 
 }
 
 .main-content {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Open Sans', sans-serif;/*'Karla', sans-serif;*/
   margin: 200px auto;
   padding: 20px;
   max-width: 500px;

@@ -26,11 +26,7 @@ var apos = require('apostrophe')({
 		    types: [
 				{
 					name: 'blogs',
-					label: 'Blogs'
-				},
-				{
-					name: 'default',
-					label: 'Default'
+					label: 'Blog post'
 				},
 				{
 					name: 'home',
@@ -47,9 +43,6 @@ var apos = require('apostrophe')({
 				}
 			],
             scripts: [
-                // {
-                    // name: 'nav'
-                // },
                 {
                     name: 'site'
                 }

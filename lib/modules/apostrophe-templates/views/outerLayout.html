@@ -10,7 +10,7 @@
 
   
 
-  <div class="sidebar-column" id="header">
+  <div class="sidebar-column">
     <div class="navigation-bar w-nav" data-animation="default" data-collapse="medium" data-contain="1" data-duration="400">
       <div class="w-container">        
         <a class="logo-link w-nav-brand" href="#"><h1 class="logo-text">Seroj's Brain Stash</h1></a>
@@ -19,7 +19,7 @@
                         
             <div class="portfolio-about">
               <img src="/modules/my-apostrophe-assets/css/images/seroj.jpg" class="portfolio-img">
-              <p class="main-subheading w-hidden-medium w-hidden-small w-hidden-tiny">Brain stashes on coding, Linux, Java & node.js, Machine Learning.<br /> And of course rock & electronic music lover.</p>
+              <p class="main-subheading w-hidden-medium w-hidden-small w-hidden-tiny">Brain stashes on coding, Linux, Java, node.js & Machine Learning.<br /> And of course rock & electronic music lover.</p>
             </div>
             <div class="divider w-hidden-medium w-hidden-small w-hidden-tiny"></div>
             <ul class="active">
@@ -28,31 +28,40 @@
               <li><a class="nav-link w-nav-link" href="/about" style="max-width: 940px;">About</a></li>
               <li><a class="nav-link w-nav-link" href="/contact" style="max-width: 940px;">Contact</a></li>
             </ul>
-            <a class="toggle-nav" href="#">&#9776;</a>
+
             <div class="divider"></div>
             <div class="social-link-group">
-              <a class="social-icon-link w-inline-block" href="#"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>              
-              <a class="social-icon-link w-inline-block" href="#"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
-            </div>                      
+              <a class="social-icon-link w-inline-block" href="https://github.com/aseroj/"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+              <a class="social-icon-link w-inline-block" href="https://www.linkedin.com/in/seroj-alaverdian/"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+              <a class="social-icon-link w-inline-block" href="https://bitbucket.org/seroj/"><i class="fa fa-bitbucket fa-lg" aria-hidden="true"></i></a>
+              <a class="social-icon-link w-inline-block" href="https://medium.com/@a.seroj"><i class="fa fa-medium fa-lg" aria-hidden="true"></i></a>
+            </div>
 
           </nav>
         </header>
-        <div class="menu-button w-nav-button">
-          <div class="w-icon-nav-menu"></div>
-        </div>
       </div>
-      <div class="w-nav-overlay" data-wf-ignore="" style="display: none;"></div>
     </div>
   </div>
 
-<nav class="navigation-menu-toggled w-nav-menu" role="navigation" style="transform: translateY(0px) translateX(0px);">                                
-  <ul class="active">
-    <li><a class="nav-link w-nav-link w--current" href="/" style="max-width: 940px;">Home</a></li>
-    <li><a class="nav-link w-nav-link" href="/all-posts" style="max-width: 940px;">All Posts</a></li>
-    <li><a class="nav-link w-nav-link" href="/about" style="max-width: 940px;">About</a></li>
-    <li><a class="nav-link w-nav-link" href="/contact" style="max-width: 940px;">Contact</a></li>
-  </ul>
-</nav>
+  <div class="navigation-menu-toggled sidebar is-closed">
+    <div class="toggle-wrapper"><a class="sidebar-toggle is-closed" id="nav-toggle" href="#"><span></span></a></div>
+    <!--<button class="sidebar-toggle is-closed"><i class="fa fa-plus icon"></i></button>-->
+
+
+    <ul class="active">
+      <li><a class="nav-link w-nav-link w--current" href="/" style="max-width: 940px;">Home</a></li>
+      <li><a class="nav-link w-nav-link" href="/all-posts" style="max-width: 940px;">All Posts</a></li>
+      <li><a class="nav-link w-nav-link" href="/about" style="max-width: 940px;">About</a></li>
+      <li><a class="nav-link w-nav-link" href="/contact" style="max-width: 940px;">Contact</a></li>
+    </ul>
+    <div class="divider"></div>
+    <div class="social-link-group">
+      <a class="social-icon-link w-inline-block" href="https://github.com/aseroj/"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+      <a class="social-icon-link w-inline-block" href="https://www.linkedin.com/in/seroj-alaverdian/"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+      <a class="social-icon-link w-inline-block" href="https://bitbucket.org/seroj/"><i class="fa fa-bitbucket fa-lg" aria-hidden="true"></i></a>
+      <a class="social-icon-link w-inline-block" href="https://medium.com/@a.seroj"><i class="fa fa-medium fa-lg" aria-hidden="true"></i></a>
+    </div>
+  </div>
 
 {% endblock %}
 
