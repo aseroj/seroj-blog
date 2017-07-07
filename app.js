@@ -1,6 +1,6 @@
 var apos = require('apostrophe')({
 	shortName: 'seroj',
-	title: 'seroj',
+	title: 'Seroj\'s Brain Stash',
 
 	// See lib/modules for basic project-level configuration of our modules
 	// responsible for serving static assets, managing page templates and
@@ -8,32 +8,12 @@ var apos = require('apostrophe')({
 
 	bundles: [ 'apostrophe-blog' ],
 	modules: {
-		// 'apostrophe-blog': {},
-		// 'apostrophe-blog-pages': {},
-		// 'apostrophe-blog-widgets': {},
-		'apostrophe-pages': {
-			filters: {
-		      // Grab our ancestor pages, with two levels of subpages
-		      ancestors: {
-		        children: {
-		          depth: 2
-		        }
-		      },
-		      // We usually want children of the current page, too
-		      children: true
-		    },
-		    // We must list `apostrophe-blog-page` as one of the available page types
-		    types: [
-				{
-					name: 'blogs',
-					label: 'Blog post'
-				},
-				{
-					name: 'home',
-					label: 'Home'
-				}
-      		]
-    	},
+	    'apostrophe-templates': { viewsFolderFallback: __dirname + '/views' },
+
+		'apostrophe-blog': {},
+		'apostrophe-blog-pages': {},
+		'apostrophe-blog-widgets': {},
+
 		// This configures the apostrophe-assets module to push a 'site.less'
 		// stylesheet
 		'apostrophe-assets': {
