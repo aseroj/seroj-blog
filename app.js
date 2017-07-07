@@ -28,5 +28,7 @@ var apos = require('apostrophe')({
                 }
             ]
 		},
+
+        'apostrophe-helpers': {}
   }
 });

@@ -28,7 +28,7 @@ Listing
       {% if piece.authorId %}
         <h6 class="blog-listing-author">by {{ piece._author.title }}</h6>
       {% endif %}
-      <div class="blog-listing-excerpt">{{ apos.sandbox.areaToPlainText(piece, 'main') | truncate(200) }}</div>
+      <div class="blog-listing-excerpt">{{ apos.helpers.areaToPlainText(piece, 'main') | truncate(200) }}</div>
       {# <div class="blog-listing-excerpt">{{ apos.singleton(piece, 'main', 'apostrophe-rich-text', { edit: false, truncate: 50 } ) }}</div> #}
       <a href="{{ piece._url }}" alt="Read More">Read More</a>
     </div>
@@ -49,7 +49,7 @@ Listing
         </div>
       </div>
       <div class="blog-card-excerpt-container">
-        <p class="blog-card-excerpt">{{ apos.sandbox.areaToPlainText(piece, 'main', { truncate: 300 }) }}</p>
+        <p class="blog-card-excerpt">{{ apos.helpers.areaToPlainText(piece, 'main', { truncate: 300 }) }}</p>
         <a href="{{ piece._url }}">Read More</a>
       </div>
     </div>
