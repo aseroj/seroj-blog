@@ -1,0 +1,30 @@
+{% extends 'apostrophe-templates:layout.html' %}
+
+{%- block title -%}
+
+{%- endblock -%}
+
+{% block headerContent %}{% endblock %}
+
+{% block mainContent %}
+<div class="content">
+	<div class="w-container">
+
+		<div class="post-title-section">
+			<h1>{{ data.page.title | e }}</h1>
+		</div>
+
+		<div class="body-copy w-richtext">
+			{{ apos.singleton(data.page, 'textBlock', 'apostrophe-rich-text', {
+				toolbar: [ 'Styles', 'Bold', 'Italic', 'Blockquote', 'Link', 'Anchor', 'Unlink', 'BulletedList' ],
+				styles: [
+					{ name: 'Title', element: 'h3' },
+					{ name: 'Subtitle', element: 'h4' }
+				]
+			}) }}
+		</div>
+
+	</div>
+
+</div>
+{% endblock %}
