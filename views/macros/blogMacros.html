@@ -36,8 +36,7 @@ Listing
 {%- endmacro -%}
 
 {%- macro blogCard(piece) -%}
-  CARD
-  <div class="column width-30">
+<!--   <div class="column width-30">
     <div class="demo-blog-card">
       <div class="blog-card-head">
         {{ apos.singleton(piece, 'slideshow', 'apostrophe-images', { limit: 1, aspectRatio: [324, 162], noHeight: true, edit: false, size: 'one-third' }) }}
@@ -55,4 +54,23 @@ Listing
     </div>
     <span class="sticker sticker--overlap">{{ piece.publishedAt | date('MMM Do, YYYY') }}</span>
   </div>
+ -->
+
+  <div class="w-dyn-item">
+    <div class="post-wrapper">
+      <a class="post-title-link w-inline-block" href="{{ piece._url }}">
+        <h1 class="post-title">{{ piece.title }}</h1>
+      </a>
+      <div class="post-info-wrapper">
+        <div class="post-info">{{ piece.publishedAt | date('MMM Do, YYYY') }}</div>
+        <div class="post-info">|</div>
+        <!-- <a class="post-info when-link" href="/categories/travel">Travel</a> -->
+        <span class="post-info when-link">{{ apos.helpers.tagsToTag(piece)}}</span>
+      </div>
+      <p class="post-summary">{{ apos.helpers.areaToPlainText(piece, 'main', { truncate: 300 }) }}</p>
+      <a class="button-round w-button" href="{{ piece._url }}">Continue reading →</a>
+    </div>
+  </div>
+
+  
 {%- endmacro -%}
