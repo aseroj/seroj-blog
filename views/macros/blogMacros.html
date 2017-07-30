@@ -14,10 +14,13 @@
   <div class="blog-list w-dyn-list">
     <div class="w-dyn-items">
       <div class="w-dyn-item">
-        <div class="post-wrapper"><a class="blog-title-link w-inline-block" href="{{ piece._url }}"><h1 class="blog-title">{{ piece.title | e }}</h1></a>
+        <div class="post-wrapper">
+          <a class="post-title-link w-inline-block" href="{{ piece._url }}">
+            <h1 class="post-title">{{ piece.title | e }}</h1>
+          </a>
           <div class="post-info-wrapper">
             <div class="post-info">{{ piece.publishedAt | date('MMM DD, YYYY' ) }}</div>
-            <div class="post-info">|</div><a class="post-info when-link" href="#">Travel</a></div>
+            <div class="post-info">|</div><span class="post-info when-link">{{ apos.helpers.tagsToTag(piece)}}</span></div>
           <p class="post-summary">{{ apos.helpers.areaToPlainText(piece, 'main') | truncate(200) }}</p>
           <a class="button-round w-button" href="{{ piece._url }}">Continue reading →</a>
         </div>
@@ -27,26 +30,6 @@
 {%- endmacro -%}
 
 {%- macro blogCard(piece) -%}
-  <div class="column width-30">
-    <div class="demo-blog-card">
-      <div class="blog-card-head">
-        {{ apos.singleton(piece, 'slideshow', 'apostrophe-images', { limit: 1, aspectRatio: [324, 162], noHeight: true, edit: false, size: 'one-third' }) }}
-        <div class="blog-card-title-container">
-          <a href="{{ piece._url }}"><h6 class="blog-card-title">{{ piece.title }}</h6></a>
-          {% if piece.authorId %}
-            <span class="blog-card-author">by {{ piece._author.title }}</span>
-          {% endif %}
-        </div>
-      </div>
-      <div class="blog-card-excerpt-container">
-        <p class="blog-card-excerpt">{{ apos.helpers.areaToPlainText(piece, 'main', { truncate: 300 }) }}</p>
-        <a href="{{ piece._url }}">Read More</a>
-      </div>
-    </div>
-    <span class="sticker sticker--overlap">{{ piece.publishedAt | date('MMM Do, YYYY') }}</span>
-  </div>
- -->
-
   <div class="w-dyn-item">
     <div class="post-wrapper">
       <a class="post-title-link w-inline-block" href="{{ piece._url }}">
@@ -62,6 +45,4 @@
       <a class="button-round w-button" href="{{ piece._url }}">Continue reading →</a>
     </div>
   </div>
-
-  
 {%- endmacro -%}
