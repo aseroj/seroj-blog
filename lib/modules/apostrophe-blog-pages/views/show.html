@@ -13,7 +13,7 @@
             <div class="post-info-wrapper">
                 <div class="post-info">{{ data.piece.publishedAt | date('MMM Do, YYYY') }}</div>
                 <div class="post-info">|</div>
-                <a class="post-info when-link" href="#">Travel</a>
+                <span class="post-info when-link">{{ apos.helpers.tagsToTag(data.piece) }}</span>
             </div>
         </div>
 
